@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+---
+<nav class="navbar">
+    <div class="navbar-section">
+        <a href="/">
+            <Image src={import('../images/logos/logo-black.png')} alt="logo" width={72}/>
+        </a>
+    </div>
+    <div class="navbar-section">
+        <ul class="navbar-menu">
+            <li><a href="/"><span>Inicio</span></a></li>
+            <li><a href="/projects"><span>Proyectos</span></a></li>
+            <li><a href="/blog"><span>Blog</span></a></li>
+        </ul>
+    </div>
+</nav>
+
+<style>
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-menu {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    a {
+        color: var(--white);
+        text-decoration: none;
+        &:hover {
+            color: #808080;
+        }
+    }
+</style>

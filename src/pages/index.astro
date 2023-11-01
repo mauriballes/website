@@ -1,0 +1,48 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '../layouts/Layout.astro'
+import MainWrapper from '../components/MainWrapper.astro'
+import Section from '../components/Section.astro'
+import IconLink from '../components/IconLink.astro'
+---
+<Layout title='Inicio | mauriballes' description='Página de inicio'>
+    <MainWrapper title='mauriballes'>
+        <Section>
+            <h2>> Acerca de mi</h2>
+            <p>¡Hola! Soy Mauricio Ballesteros, un Ingeniero Informático apasionado por la tecnología y un devoto del café, con base en Santa Cruz, Bolivia. Mi principal enfoque es en el área de DevOps, donde paso la mayor parte de mi tiempo, pero también soy un entusiasta del desarrollo web en general y me apasiona la enseñanza. En mis ratos libres, disfruto creando contenido tecnológico interesante que comparto a través de mis redes. ¡Únete a mi viaje en el mundo de la tecnología!</p>
+        </Section>
+        <Section>
+            <h2>> Redes</h2>
+            <div class="home-social-links">
+                <IconLink 
+                    href='https://github.com/mauriballes'
+                    title='GitHub'
+                    icon='github'/>
+                <IconLink 
+                    href='https://linkedin.com/in/mauriballes'
+                    title='LinkedIn'
+                    icon='linkedin'/>
+                <IconLink 
+                    href='https://youtube.com/@mauriballes'
+                    title='YouTube'
+                    icon='youtube'/>
+                <IconLink 
+                    href='https://twitter.com/mauriballes'
+                    title='Twitter'
+                    icon='x-twitter'/>
+                <IconLink 
+                    href='https://twitch.tv/mauriballes'
+                    title='Twitch'
+                    icon='twitch'/>
+            </div>
+        </Section>
+    </MainWrapper>
+</Layout>
+
+<style>
+    .home-social-links {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+</style>

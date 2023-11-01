@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '../layouts/Layout.astro'
+import MainWrapper from '../components/MainWrapper.astro'
+import Section from '../components/Section.astro'
+import ProjectCard from '../components/ProjectCard.astro'
+---
+<Layout title='Proyectos | mauriballes' description='Página de proyectos'>
+    <MainWrapper title='Proyectos'>
+        <Section>
+            <ProjectCard
+                title="Redes Bayesianas"
+                href='https://bayesianas.mauriballes.com'
+                imagePath='bayesianas'
+                description='Este proyecto se centra en el estudio y aplicación de redes bayesianas, permitiéndote construir tu propia red con nodos y conexiones para realizar inferencias sobre sus objetivos. Aquí, exploramos y aplicamos los fundamentos de sistemas expertos para potenciar tu capacidad de análisis y toma de decisiones en un entorno de redes bayesianas personalizadas.'
+            />
+            
+        </Section>
+        <Section>
+            <ProjectCard
+                title="Binary Tree"
+                href='https://tree.mauriballes.com'
+                imagePath='tree'
+                description='Este proyecto se enfoca en la implementación de un árbol binario que permite visualizar de manera gráfica las operaciones elementales asociadas a este tipo de estructura. Toda la lógica subyacente está desarrollada en TypeScript, lo que garantiza una implementación sólida y eficiente de las estructuras de datos involucradas.'
+            />
+
+        </Section>
+        <Section>
+            <ProjectCard
+                title="Django Up"
+                href='https://github.com/mauriballes/django-up'
+                imagePath='django-up'
+                description='Este módulo para Django brinda una capacidad de implementación (deployments) que se asemeja a la funcionalidad ofrecida por la herramienta Capistrano de Ruby. Está diseñado específicamente para integrarse perfectamente con los comandos y estructuras de Django, facilitando así la gestión de implementaciones en tu proyecto.'
+            />
+        </Section>
+    </MainWrapper>
+</Layout>
+
+<style>
+    .home-projects {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+</style>

@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+	title: string;
+    description: string;
+	imagePath: string;
+	href: string;
+}
+
+const { href, title, description, imagePath } = Astro.props;
+---
+<h2>> {title}</h2>
+<div class="projects">
+    <a href={href} target="_blank">
+        <Image src={import(`../images/projects/${imagePath}.png`)} alt={imagePath} width={320} height={160}/>
+    </a>
+    <p>{description}</p>
+</div>
+
+<style>
+    .projects {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+</style>

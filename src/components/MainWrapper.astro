@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets'
+import logoDark from '../images/logos/logo-dark.png'
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+<main class="main-content">
+    <Image src={logoDark} alt="Logo Dark" width={96}/>
+    <h1>{title}</h1>
+    <slot></slot>
+</main>
+
+<style>
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+</style>

@@ -1,0 +1,98 @@
+---
+import Navbar from '../components/Navbar.astro';
+
+interface Props {
+	title: string;
+    description: string;
+}
+
+const { title, description } = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+        <Navbar />
+		<slot />
+	</body>
+</html>
+<style is:global>
+    :root {
+        --white: #FEFEFE;
+        --black: #212121;
+        --primary-light: #A3D1FF;
+        --primary-dark: #004080;
+    }
+
+    @font-face {
+        font-family: "OfficeCodePro";
+        src: url('/fonts/OfficeCodePro/OfficeCodePro-Bold.ttf') format("truetype");
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "OfficeCodePro";
+        src: url('/fonts/OfficeCodePro/OfficeCodePro-BoldItalic.ttf') format("truetype");
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: "OfficeCodePro";
+        src: url('/fonts/OfficeCodePro/OfficeCodePro-Light.ttf') format("truetype");
+        font-weight: light;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "OfficeCodePro";
+        src: url('/fonts/OfficeCodePro/OfficeCodePro-LightItalic.ttf') format("truetype");
+        font-weight: light;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: "OfficeCodePro";
+        src: url('/fonts/OfficeCodePro/OfficeCodePro-Medium.ttf') format("truetype");
+        font-weight: medium;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "OfficeCodePro";
+        src: url('/fonts/OfficeCodePro/OfficeCodePro-MediumItalic.ttf') format("truetype");
+        font-weight: medium;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: "OfficeCodePro";
+        src: url('/fonts/OfficeCodePro/OfficeCodePro-Regular.ttf') format("truetype");
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "OfficeCodePro";
+        src: url('/fonts/OfficeCodePro/OfficeCodePro-RegularItalic.ttf') format("truetype");
+        font-weight: normal;
+        font-style: italic;
+    }
+
+    html {
+        font-family: "OfficeCodePro", Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        background-color: var(--black);
+        color: var(--white);
+        padding: 0;
+        margin: 0;
+    }
+</style>
