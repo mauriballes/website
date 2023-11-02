@@ -1,10 +1,11 @@
 ---
 import { Image } from 'astro:assets';
+import logo from '../images/logos/logo-black.png'
 ---
 <nav class="navbar">
     <div class="navbar-section">
         <a href="/">
-            <Image src={import('../images/logos/logo-black.png')} alt="logo" width={72}/>
+            <Image src={logo} alt="logo" width={72}/>
         </a>
     </div>
     <div class="navbar-section">
@@ -18,24 +19,31 @@ import { Image } from 'astro:assets';
 
 <style>
     .navbar {
+        margin-bottom: 1rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
     .navbar-menu {
+        padding: 0 0.5rem;
         list-style: none;
+        gap: 0.5rem;
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 1rem;
     }
 
-    a {
+    .navbar-menu a {
         color: var(--white);
         text-decoration: none;
         &:hover {
             color: #808080;
         }
     }
+
+    .navbar-menu a span {
+        font-size: 0.8rem;
+    }
+
 </style>

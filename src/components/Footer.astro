@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+import boliviaFlag from '../images/icons/bolivia.png'
+import worldGlobe from '../images/icons/worldwide.png'
+---
+<footer class="footer">
+    <p>
+        <span>Hecho en Bolivia</span>&nbsp;<Image src={boliviaFlag} alt="Bolivia flag" width={24}/>
+    </p>
+    <p>
+        <span>Para el mundo</span>&nbsp;<Image src={worldGlobe} alt="World globe" width={24}/>
+    </p>
+</footer>
+
+<style>
+    .footer {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer p {
+        margin: 0;
+    }
+</style>
